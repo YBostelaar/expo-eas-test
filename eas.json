@@ -1,0 +1,87 @@
+{
+  "cli": {
+    "version": ">= 12.6.2",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "base": {
+      "env": {
+        "node": "22.11.0",
+        "NODE_ENV": "production"
+      }
+    },
+    "development-beeksebergen": {
+      "extends": "base",
+      "env": {
+        "TENANT_ID": "beeksebergen",
+        "APP_ENV": "development"
+      },
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "buildConfiguration": "Debug"
+      }
+    },
+    "development-dierenbos": {
+      "extends": "base",
+      "env": {
+        "TENANT_ID": "dierenbos",
+        "APP_ENV": "development"
+      },
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "buildConfiguration": "Debug"
+      }
+    },
+    "development-xo10": {
+      "extends": "base",
+      "env": {
+        "TENANT_ID": "xo10",
+        "APP_ENV": "development"
+      },
+      "developmentClient": true,
+      "distribution": "internal",
+      "ios": {
+        "buildConfiguration": "Debug"
+      }
+    },
+    "production-beeksebergen": {
+      "extends": "base",
+      "env": {
+        "TENANT_ID": "beeksebergen",
+        "APP_ENV": "production"
+      },
+      "distribution": "store",
+      "ios": {
+        "buildConfiguration": "Release"
+      }
+    },
+    "production-dierenbos": {
+      "extends": "base",
+      "env": {
+        "TENANT_ID": "dierenbos",
+        "APP_ENV": "production"
+      },
+      "distribution": "store",
+      "ios": {
+        "buildConfiguration": "Release"
+      }
+    },
+    "production-xo10": {
+      "extends": "base",
+      "env": {
+        "TENANT_ID": "xo10",
+        "APP_ENV": "production"
+      },
+      "distribution": "store",
+      "ios": {
+        "buildConfiguration": "Release"
+      }
+    }
+  },
+  "submit": {
+    "production-beeksebergen": {},
+    "production-dierenbos": {}
+  }
+}

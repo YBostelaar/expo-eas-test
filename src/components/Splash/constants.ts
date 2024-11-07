@@ -1,0 +1,6 @@
+export enum states {
+  WAIT_FOR_APP_TO_BE_READY,
+  WAIT_FOR_SPLASH_ANIMATION_TO_FINISH,
+  FADE_OUT,
+  HIDDEN,
+}
